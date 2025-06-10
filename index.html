@@ -19,17 +19,15 @@
      box-shadow: 0 0 20px limeblue;
      margin-bottom: 1rem;
    }
-    header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background-image: #0a0a0a;
-      background-size: cover;
-      background-position: center;
-      text-shadow: 1px 1px 3px #000;
-    }
+   header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #0a0a0a; /* Betulkan dari background-image */
+  text-shadow: 1px 1px 3px #000;
+  }
     header h1 {
       font-size: 3rem;
       margin-bottom: 0.5rem;
@@ -72,9 +70,10 @@
 </head>
 <body>
   <header>
+    <img src="shah.jpg" alt="My Photo" class="profile-pic" />
     <h1>Ethical Hacker & Security Analyst</h1>
     <p>Protecting systems, one vulnerability at a time.</p>
-    <img src="shah.jpg" alt="My Photo" class="profile-pic" />
+    
   </header>
   <nav>
     <a href="#about">About</a>
