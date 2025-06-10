@@ -60,6 +60,20 @@
       border-bottom: 2px solid #33ff33;
       margin-bottom: 1rem;
     }
+
+    #terminal {
+  background-color: #000000;
+  padding: 1rem;
+  color: #33ff33;
+  font-family: 'Courier New', Courier, monospace;
+  width: 80%;
+  max-width: 600px;
+  margin: 2rem auto 0;
+  border: 1px solid #33ff33;
+  border-radius: 5px;
+  box-shadow: 0 0 10px limegreen;
+  min-height: 60px;
+}
     footer {
       background-color: #111;
       text-align: center;
@@ -68,8 +82,38 @@
     }
   </style>
 </head>
+
+  <script>
+const lines = [
+  'Initializing security protocols...',
+  'Running Nmap scan on target...',
+  'Bypassing firewall...',
+  'Access granted.'
+];
+let line = 0;
+let char = 0;
+const speed = 50;
+function typeLine() {
+  if (line < lines.length) {
+    if (char < lines[line].length) {
+      document.getElementById('typewriter').innerHTML += lines[line].charAt(char);
+      char++;
+      setTimeout(typeLine, speed);
+    } else {
+      document.getElementById('typewriter').innerHTML += '<br>';
+      line++;
+      char = 0;
+      setTimeout(typeLine, 500);
+    }
+  }
+}
+window.onload = typeLine;
+</script>
 <body>
   <header>
+    <div id="terminal">
+  <p id="typewriter"></p>
+   </div>
     <img src="shah.jpg.jpeg" alt="My Photo" class="profile-pic" />
     <h1>Ethical Hacker & Security Analyst</h1>
     <p>Protecting systems, one vulnerability at a time.</p>
